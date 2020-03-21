@@ -1,0 +1,63 @@
+<app-menu></app-menu>
+<div class="row">
+<div class="col-1"></div>
+    <div class="col-10 bg-light p-5">
+
+        <div>
+
+            <img id="imgPelicula" src="{{ url + 'imagenPelicula/' +peliculaActualizar.image }}" style="width: 100px; display: block; margin: auto;">
+
+            <form #formularioActualizar="ngForm" (ngSubmit)="actualizarPelicula()">
+                <div  class="form-group">
+                    <div>
+                        <label for="title">Titulo</label>
+                        <input type="text" id="title" placeholder="Título" required #title="ngModel" name="title"
+                            [(ngModel)]="peliculaActualizar.title" class="form-control">
+                    </div>
+                    <div>
+                        <label for="duration">Duración</label>
+                        <input type="duration" id="duration" placeholder="Duración" required #duration="ngModel"
+                            name="duration" [(ngModel)]="peliculaActualizar.duration" class="form-control">
+                    </div>
+                    <div>
+                        <label for="genre">Género</label>
+                        <input type="genre" id="genre" placeholder="Género" required #genre="ngModel" name="genre"
+                            [(ngModel)]="peliculaActualizar.genre" class="form-control">
+                    </div>
+                    <div>
+                        <label for="year">Año</label>
+                        <input type="text" id="year" placeholder="Año" required #year="ngModel" name="year"
+                            [(ngModel)]="peliculaActualizar.year" class="form-control" class="form-control">
+                    </div>
+                    <div>
+                        <label for="sypnosis">Sipnosis</label>
+                        <input type="sypnosis" id="sypnosis" placeholder="Sipnosis" required #sypnosis="ngModel"
+                            name="sypnosis" [(ngModel)]="peliculaActualizar.synopsis" class="form-control">
+                    </div>
+                    <!-- <div>
+                <label for="link">Link</label>
+                <input type="link" id="link" placeholder="Link" required
+                #link="ngModel" name="link" [(ngModel)]="peliculaActualizar.link">
+            </div> -->
+                </div>
+
+                <div>
+                    <div>
+                        <label for="link">Link</label>
+                        <input type="file" id="link" placeholder="Subir video" required (change)="subirVideo($event)"
+                        >
+                    </div>
+                    <div>
+                        <label for="image">Imagen</label>
+                        <input type="file" id="image" placeholder="Subir imagen" required
+                            (change)="subirImagen($event)" >
+                        <div id="imgThumb"></div>
+                    </div>
+                </div>
+                <button class="boton" type="submit" class="btn boton" style="display: block; margin-left: auto; margin-right: auto;">Actualizar</button>
+                <button routerLink="/contenido" class="btn btn-primary" style="display: block; margin-left: auto; margin-right: auto; margin-top: 3%; background: #fff; color: #000;">volver</button>
+            </form>
+        </div>
+    </div>
+    <div class="col-1"></div>
+</div>

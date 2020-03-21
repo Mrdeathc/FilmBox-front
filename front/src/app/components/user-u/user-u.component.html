@@ -1,0 +1,49 @@
+<app-menu></app-menu>
+<div class="container">
+    <div class="row bg-light m-5 p-5">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <img id="imgUsuario" src="{{ url + 'imagenUsuario/' + user.image }}" style="width: 60px;">
+
+            <form #formuActualizarUsuario="ngForm" (ngSubmit)="actualizarUsuario()">
+                <div>
+                    <div>
+                        <label for="user-name">Nombre</label>
+                        <input type="text" id="user-name" placeholder="Nombre" required
+                        #name="ngModel" name="name" [(ngModel)]="user.name" class="form-control">
+                    </div>
+                    <div>
+                        <label for="user-email">Email</label>
+                        <input type="email" id="user-email" placeholder="Email" required
+                        #email="ngModel" name="email" [(ngModel)]="user.email" class="form-control">
+                    </div>
+                    <div>
+                        <label for="user-password">Contraseña</label>
+                        <input type="password" id="user-password" placeholder="Contraseña" required
+                        #password="ngModel" name="password" [(ngModel)]="user.password" class="form-control">
+                    </div>
+                    <div>
+                        <label for="user-role">Rol</label>
+                        <input type="text" id="user-role" placeholder="ROLE_USER || ROLE_ADMIN" required
+                        #role="ngModel" name="role" [(ngModel)]="user.role" class="form-control">
+                    </div>
+                    <div>
+                        <label for="user-count">Cuenta</label>
+                        <input type="text" id="user-count" placeholder="COUNT_BASIC || COUNT_PREMIUM" required
+                        #count="ngModel" name="count" [(ngModel)]="user.count" class="form-control">
+                    </div>
+                    <div>
+                        <label for="user-term">Fecha de corte</label>
+                        <input type="text" id="user-term" placeholder="Fecha de corte" required
+                        #term="ngModel" name="term" [(ngModel)]="user.term" class="form-control">
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary mt-4" type="submit">Actualizar</button>
+
+            </form>
+        </div>
+        <div class="col-1"></div>
+    </div>
+ 
+</div>

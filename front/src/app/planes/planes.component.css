@@ -1,0 +1,4 @@
+.carta-1:hover {
+    transition: 300ms ease;
+    transform: scale(1.05);
+}

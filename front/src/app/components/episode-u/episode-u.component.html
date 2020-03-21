@@ -1,0 +1,57 @@
+<app-menu></app-menu>
+<div class="container bg-light p-5">
+
+    <img id="imgEpisodio" src="{{ url + 'imagenEpisodio/' +episodioActualizar.image }}" style="width: 100px;">
+
+    <form #formularioActualizar="ngForm" (ngSubmit)="actualizarEpisodio()">
+        <div>
+            <div>
+                <label for="series">Serie ID</label>
+                <input type="text" id="series" placeholder="Serie ID" required 
+                #series="ngModel" name="series" [(ngModel)]="episodioActualizar.series" class="form-control">
+            </div>
+            <div>
+                <label for="season">Temporada #</label>
+                <input type="text" id="season" placeholder="Temporada #" required
+                #season="ngModel" name="season" [(ngModel)]="episodioActualizar.season" class="form-control">
+            </div>
+            <div>
+                <label for="episode">Episodio #</label>
+                <input type="text" id="episode" placeholder="Episodio #" required
+                #episode="ngModel" name="episode" [(ngModel)]="episodioActualizar.episode" class="form-control">
+            </div>
+            <div>
+                <label for="title">Titulo</label>
+                <input type="text" id="title" placeholder="Título" required
+                #title="ngModel" name="title" [(ngModel)]="episodioActualizar.title" class="form-control">
+            </div>
+            <div>
+                <label for="duration">Duración</label>
+                <input type="duration" id="duration" placeholder="Duración" required
+                #duration="ngModel" name="duration" [(ngModel)]="episodioActualizar.duration" class="form-control">
+            </div>
+            <div>
+                <label for="date">Fecha</label>
+                <input type="text" id="date" placeholder="Fecha" required
+                #date="ngModel" name="date" [(ngModel)]="episodioActualizar.date" class="form-control">
+            </div>
+            <div>
+                <label for="sypnosis">Sipnosis</label>
+                <input type="sypnosis" id="sypnosis" placeholder="Sipnosis" required
+                #sypnosis="ngModel" name="sypnosis" [(ngModel)]="episodioActualizar.synopsis" class="form-control">
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="link">Link</label>
+                <input type="file" id="link" placeholder="Subir video" required (change)="subirVideo($event)">
+            </div>
+            <div>
+                <label for="image">Imagen</label>
+                <input type="file" id="image" placeholder="Subir imagen" required (change)="subirImagen($event)">
+                <div id="imgThumb"></div>
+            </div>
+        </div>
+        <button class="btn btn-primary boton" type="submit">Actualizar</button>
+    </form>
+</div>

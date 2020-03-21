@@ -1,0 +1,55 @@
+<app-menu></app-menu>
+<div class="container">
+    <form #formulariocCrear="ngForm" (ngSubmit)="CrearPelicula()">
+        <div class="form-group bg-light p-5">
+            <div>
+                <label for="title">Titulo</label>
+                <input type="text" id="title" placeholder="Título" required #title="ngModel" name="title"
+                    [(ngModel)]="peliculaNueva.title" class="form-control">
+            </div>
+            <div>
+                <label for="duration">Duración</label>
+                <input type="duration" id="duration" placeholder="Duración" required #duration="ngModel" name="duration"
+                    [(ngModel)]="peliculaNueva.duration" class="form-control">
+            </div>
+            <div>
+                <label for="genre">Género</label>
+                <input type="genre" id="genre" placeholder="Género" required #genre="ngModel" name="genre"
+                    [(ngModel)]="peliculaNueva.genre" class="form-control">
+            </div>
+            <div>
+                <label for="year">Año</label>
+                <input type="text" id="year" placeholder="Año" required #year="ngModel" name="year"
+                    [(ngModel)]="peliculaNueva.year" class="form-control">
+            </div>
+            <div>
+                <label for="sypnosis">Sipnosis</label>
+                <input type="sypnosis" id="sypnosis" placeholder="Sipnosis" required #sypnosis="ngModel" name="sypnosis"
+                    [(ngModel)]="peliculaNueva.synopsis" class="form-control">
+            </div>
+<!--             <div>
+                <label for="link">Link</label>
+                <input type="link" id="link" placeholder="Link" required #link="ngModel" name="link"
+                    [(ngModel)]="peliculaNueva.link" class="form-control">
+            </div> -->
+        </div>
+
+        <div class="form-group bg-light p-5">
+            <div>
+                <label for="image">Imagen</label>
+                <input type="file" id="image" placeholder="Subir imagen" required (change)="subirImagen($event)"
+                >
+                <div id="imgThumb"></div>
+            </div>
+        </div>
+        <div class="form-group bg-light p-5">
+            <div>
+                <label for="link">Link</label>
+                <input type="file" id="link" placeholder="Subir video" required (change)="subirVideo($event)"
+                >
+            </div>
+            <button type="submit" class="btn btn-primary" style="display: block; margin-left: auto; margin-right: auto; margin-top: 3%; background: rgb(17, 88, 134); ">Crear</button>
+
+        </div>
+    </form>
+</div>

@@ -1,0 +1,41 @@
+
+<div class="row" style="background: #000; height: 780px;">
+  <h1
+    style="color: #fff; position: absolute; z-index: 9999; top: 5%; left: 8%; font-size: 20px; text-shadow: 0px 0px 10px black;">
+    <i class="fas fa-arrow-left" routerLink="/FilmBox"></i> {{this.movie.title}} | {{this.movie.year}}
+  </h1>
+
+  <div *ngIf="this.identidad">
+    <div id="player-content" (click)="showPublicidad()" >
+      <div id="player-content" (click)="showPublicidad()" >
+        <video id="player" (timeupdate)="setCurrentTime($event)" class="video" preload="metadata" autoplay controls>
+            <source id="player-src" src="{{this.videoPath}}" type="video/mp4"/>
+              Browser not supported -->
+        </video>
+    </div>
+    </div>
+  </div>
+  <div class="col-12">1</div>
+  <div class="col-12">1</div>
+</div>
+
+
+
+<!-- <script>
+  // Show loading animation.
+  let myvideo=document.getElementById('player');
+
+  var playPromise = myvideo.play();
+  console.log(playPromise);
+
+  if (playPromise !== undefined) {
+    playPromise.then(_ => {
+      // Automatic playback started!
+      // Show playing UI.
+    })
+    .catch(error => {
+      // Auto-play was prevented
+      // Show paused UI.
+    });
+  }
+</script> -->

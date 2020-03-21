@@ -1,0 +1,21 @@
+<p>users works!</p>
+<li><a routerLink="/">Inicio</a></li>
+<ul *ngIf="this.identidad" id="usersList" style="overflow-y: scroll; height: 300px;"> 
+    <li *ngFor="let user of users">
+      <div *ngIf="user.role=='ROLE_USER' && identidad.role=='ROLE_ADMIN' ||
+                  user.role!='ROLE_SUPER' && identidad.role=='ROLE_SUPER'" class="card">
+        
+        <a *ngIf="this.identidad.role!='ROLE_USER'" (click)="editar(user)">Editar usuario &#9998;</a>
+        <a *ngIf="this.identidad.role!='ROLE_USER'" (click)="eliminar(user)">Eliminar usuario X</a>
+        
+        <div class="card-body" >
+          <img src="{{ url + 'imagenUsuario/' + user.image }}" style="width: 80px;">
+          <p class="card-text text-center" style="list-style: none;">Nombre: {{user.name}}</p>
+          <p class="card-text text-center" style="list-style: none;">Correo: {{user.email}}</p>
+          <p *ngIf="this.identidad.role=='ROLE_SUPER'" class="card-text text-center" style="list-style: none;">Rol: {{user.role}}</p>
+          <p class="card-text text-center" style="list-style: none;">Cuenta: {{user.count}}</p>
+          <p class="card-text text-center" style="list-style: none;">Fecha de corte: {{user.term}}</p>
+        </div>
+      </div>
+    </li>
+  </ul>

@@ -1,0 +1,33 @@
+<app-menusimple></app-menusimple>
+<div class="row">
+    <div class="contact-wrapper" data-aos="zoom-in">
+        <header class="login-cta">
+            <h2 class="title">Iniciar Sesión</h2>
+        </header>
+        <form #formularioLogin="ngForm" (ngSubmit)="loginUsuario()">
+            <div class="form-row">
+                <input class="color-1" type="text" required style="color: aliceblue;" #email="ngModel" name="email"
+                    [(ngModel)]="login.email">
+                <span>Correo / Email</span>
+            </div>
+            <div class="form-row">
+                <input class="color-1" type="password" required style="color: aliceblue;" #password="ngModel"
+                    name="password" [(ngModel)]="login.password">
+                <span>Contraseña</span>
+            </div>
+            <div class="form-row"></div>
+            <div class="form-row">
+                <button type="submit">Iniciar sesión</button>
+            </div>
+        </form>
+        <div class="center">
+            <p style="color: aliceblue; font-weight: 300;">¿Aún no estás registrado?
+                <a style="color: aliceblue; font-weight: 600;" routerLink="/registro">Registrate</a>
+            </p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    
+</div>

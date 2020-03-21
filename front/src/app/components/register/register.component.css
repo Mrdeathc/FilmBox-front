@@ -1,0 +1,97 @@
+.contact-wrapper {
+    background: rgba(0, 0, 0, 0.596);
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 2em;
+    padding: 4em;
+    width: 35em;
+    display: block;
+    margin: auto;
+  }
+  .login-cta > h2 {
+    font-weight: 800;
+    color: #b8b8b8;
+    font-size: 1.75rem;
+    text-align: center;
+  }
+  .center {
+      text-align: center;
+  }
+  form {
+    margin: 2em 0;
+  }
+  form > .form-row {
+    display: flex;
+    margin: .75em 0;
+    position: relative;
+  }
+  form > .form-row > span {
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+    display: inline-block;
+    font-weight: 400;
+    left: 1em;
+    padding: 0 .5em;
+    position: absolute;
+    pointer-events: none;
+    transform: translatey(-50%);
+    top: 50%;
+    transition: all 300ms ease;
+  }
+  form > .form-row > input, form > .form-row > button {
+    border-radius: .5em;
+    font-family: inherit;
+    padding: 1em .5em;
+    width: 100%;
+  }
+  form > .form-row > input {
+    font-weight: bold;
+    transition: 100ms ease all;
+    width: 100%;
+  }
+  form > .form-row > input[type=text], form > .form-row > input[type=password] {
+    border: .075em solid rgb(63, 63, 63);
+  }
+  form > .form-row > input:valid + span {
+    top: 0;
+    font-size: .90rem;
+  }
+  form > .form-row > input:invalid + span {
+    top: 50%;
+  }
+  form > .form-row > input:focus + span {
+    top: 0;
+  }
+  form > .form-row > input:required {
+    box-shadow: none;
+  }
+  form > .form-row > input:focus {
+    border-color: #a3a3a3;
+    outline: none;
+  }
+  form > .form-row > input:focus:invalid {
+    box-shadow: none;
+    top: 50%;
+  }
+  form > .form-row > input:focus:valid {
+    top: 0;
+  }
+  form > .form-row > button {
+    background-color: #1f3b77;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 300ms ease;
+  }
+  form > .form-row > button:focus {
+    border: 0.1em solid #532cf8;
+    outline: none;
+  }
+  form > .form-row > button:hover {
+    background-color: #919191;
+    color: #000;
+  }
+  .color-1 {
+      background: rgb(0, 0, 0);
+      padding: 0;
+  }

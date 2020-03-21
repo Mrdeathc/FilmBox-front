@@ -1,0 +1,41 @@
+<app-menu></app-menu>
+<div class="container bg-light p-5">
+    <form #formularioCrearSerie="ngForm" (ngSubmit)="crearSerie()">
+        <div>
+            <div>
+                <label for="title">Titulo</label>
+                <input type="text" id="title" placeholder="Título" required
+                #title="ngModel" name="title" [(ngModel)]="serieNueva.title" class="form-control">
+            </div>
+            <div>
+                <label for="duration">Duración</label>
+                <input type="duration" id="duration" placeholder="Duración" required
+                #duration="ngModel" name="duration" [(ngModel)]="serieNueva.duration" class="form-control">
+            </div>
+            <div>
+                <label for="genre">Género</label>
+                <input type="genre" id="genre" placeholder="Género" required
+                #genre="ngModel" name="genre" [(ngModel)]="serieNueva.genre" class="form-control">
+            </div>
+            <div>
+                <label for="date">Año</label>
+                <input type="text" id="date" placeholder="Fecha" required
+                #date="ngModel" name="date" [(ngModel)]="serieNueva.date" class="form-control">
+            </div>
+            <div>
+                <label for="synopsis">Sinopsis</label>
+                <input type="synopsis" id="synopsis" placeholder="Sinopsis" required
+                #synopsis="ngModel" name="synopsis" [(ngModel)]="serieNueva.synopsis" class="form-control">
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <label for="image">Imagen</label>
+                <input type="file" id="image" placeholder="Subir imagen" required (change)="subirImagen($event)">
+                <div id="imgThumb"></div>
+            </div>
+        </div>
+        <button class="btn boton" type="submit">Crear</button>
+    </form>
+</div>

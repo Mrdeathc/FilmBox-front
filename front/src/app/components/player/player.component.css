@@ -1,0 +1,18 @@
+#player{
+    width: 120% !important;
+    z-index: 1;
+}
+
+.publicidad {
+    right: 0%;
+    z-index: 9999;
+    opacity: 1;
+    animation: myove;
+    position: absolute;
+  animation: mymove 5s;
+}
+@keyframes mymove {
+    0% {right: 110%;}
+    99%{right: 110%;}
+    100% {right: 0%;}
+  }

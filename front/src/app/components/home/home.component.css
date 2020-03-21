@@ -1,0 +1,37 @@
+.fondo {
+    background: url(../../../assets/img/bg-home.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.titulo1 {
+    width: 80%;
+    font-weight: 700;
+    color: #fff;
+    font-size: 4vw;
+}
+.text1 {
+    font-size: 1vw;
+    width: 70%;
+    color: rgb(136, 136, 136);
+}
+.header1{
+    padding: 17% 0% 24% 10%;
+}
+.gradient {
+    background-image: linear-gradient(to bottom, #000000, #000000, #0000006e, #00000021, #ffffff00);
+}
+.bt-1 {
+    font-size: 1vw;
+    width: 15vw;
+    background: #386386;
+    color: #fff;
+}
+.bt-1:hover {
+    transition: 160ms ease;
+    background: #253949;
+}
+@media screen and (max-width:980px) {
+    .header1{
+        padding: 0% 0% 0% 5%;
+    }
+}

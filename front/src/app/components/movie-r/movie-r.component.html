@@ -1,0 +1,45 @@
+<app-menu></app-menu>
+<div class="row">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-1">1</div>
+            <div class="col-3" data-aos="zoom-out-up">
+                <div class="card" style="width: 100%; background: none;">
+                    <img id="imgPelicula" src="{{ url + 'imagenPelicula/' + movie.image }}" style="width: 100%;">
+                    <div class="card-body">
+                        <a (click)="player(movie)" class="btn mr-3" style="width: 80%; background: rgb(17, 88, 134); color: #fff;">Ver
+                            pelicula</a>
+                        <a href="#" class="btn" style="background: rgb(17, 88, 134); color: #fff;">
+                            <i class="far fa-heart" *ngIf="!this.identidad.favorite.includes(movie._id)" (click)="like(movie)"></i>
+                            <i class="far fa-thumbs-down" *ngIf="this.identidad.favorite.includes(movie._id)" (click)="unlike(movie)"></i>
+                        </a>
+                            
+                                
+                    </div>
+                </div>
+            </div>
+            <div class="col-5" data-aos="flip-right">
+                <div class="card-body pt-5">
+                    <h5 class="card-title" style="font-size: xx-large;color: aliceblue; font-weight: 700;">{{movie.title}}</h5>
+                    <p class="card-text" style="color: aliceblue;">{{movie.synopsis}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" style="background: rgba(255, 255, 255, 0.288); color: aliceblue;">
+                        Género: {{movie.genre}}
+                    </li>
+                    <li class="list-group-item" style="background: rgba(255, 255, 255, 0.288); color: aliceblue;">
+                        Año: {{movie.year}}
+                    </li>
+                    <li class="list-group-item" style="background: rgba(255, 255, 255, 0.288); color: aliceblue;">
+                        Duración: {{movie.duration}}</li>
+                </ul>
+                <a *ngIf="this.identidad.role!='ROLE_USER'" (click)="editar(movie)" class="btn btn-primary" style="margin: 2%; color: #fff;">Editar película &#9998;</a>
+                <a *ngIf="this.identidad.role!='ROLE_USER'" (click)="eliminar(movie) " class="btn btn-primary" style="margin: 2%; color: #fff;">Eliminar película X</a>
+            </div>
+            <div class="col-1">1</div>
+        </div>
+    </div>
+   
+</div>
+
+<app-footer></app-footer>

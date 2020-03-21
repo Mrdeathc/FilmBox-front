@@ -1,0 +1,40 @@
+<app-menu></app-menu>
+
+<a *ngIf="this.identidad.role==='ROLE_USER'" routerLink="/serie-crear">
+  <div class="center" style="">
+    <video src="../../../assets/files/publicidad.mp4 " autoplay muted loop width="100%"></video>
+  </div>
+</a>
+
+
+<a *ngIf="this.identidad.role!='ROLE_USER'" routerLink="/episode-crear" class="btn btn-dark">Añadir episodio +</a>
+<h3 style="color: #fff; margin: 5% 0% 5% 0%;">temporada1</h3>
+<div *ngIf="this.identidad" id="favoriteList"> 
+  <div *ngFor="let episode of episodes" class="episodesList"> 
+    <div *ngIf="this.identidad.role!='ROLE_USER'">
+      <div *ngIf="episode.season=='1'">
+        <div>
+          <a (click)="ver(episode)" class="btn btn-dark" style="color: #fff;">Ver episodio</a>
+          <a routerLink="/episode-editar" class="btn btn-dark">Editar episodio</a>
+          <a (click)="eliminar(episode)" class="btn btn-dark" style="color: #fff;">Eliminar episodio X</a>
+          <div class="card" style="background: #000;">    
+            <div class="card-body" (click)="ver(episode)">
+              <div class="row">
+                <div class="col-6"><img class="imgEpisode" src="{{ url + 'imagenEpisodio/' + episode.image }}" style="width: 150px;"></div>
+              
+              <div class="col-6">
+                <p class="card-text " style="list-style: none; color: #fff;">{{episode.synopsis}}</p>
+                <p class="card-text text-center" style="list-style: none; color: #fff;">{{episode.title}}</p>
+                <p class="card-text text-center" ><small class="text-muted" style="color: #fff;">{{episode.duration}}</small></p>
+              </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>
+<br><br><br>
+<app-footer></app-footer>

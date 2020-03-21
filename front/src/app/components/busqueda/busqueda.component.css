@@ -1,0 +1,44 @@
+#player{
+    width: 100% !important;
+    border: 1px solid blue;
+}
+ul{
+    list-style: none;
+}
+
+.card{
+    margin: auto;
+    display: block;
+    background: #000;
+    width: 330px;
+    height: 550px;
+}
+
+.imgPelicula{
+    width: 100%;
+    height: auto;
+    transition: 350ms ease-in;
+}
+.imgPelicula:hover {
+  transform: scale(1.1);
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.movieList{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #player{
+        width: 768px !important;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    #player{
+        width: 1024px !important;
+    }
+}

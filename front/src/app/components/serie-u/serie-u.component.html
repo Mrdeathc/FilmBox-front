@@ -1,0 +1,43 @@
+<app-menu></app-menu>
+<div class="container bg-light p-5">
+
+    <img id="imgSerie" src="{{ url + 'imagenSerie/' +serieActualizar.image }}" style="width: 100px;">
+
+    <form #formularioActualizar="ngForm" (ngSubmit)="actualizarSerie()">
+        <div>
+            <div>
+                <label for="title">Titulo</label>
+                <input type="text" id="title" placeholder="Título" required
+                #title="ngModel" name="title" [(ngModel)]="serieActualizar.title" class="form-control">
+            </div>
+            <div>
+                <label for="duration">Duración</label>
+                <input type="duration" id="duration" placeholder="Duración" required
+                #duration="ngModel" name="duration" [(ngModel)]="serieActualizar.duration" class="form-control">
+            </div>
+            <div>
+                <label for="genre">Género</label>
+                <input type="genre" id="genre" placeholder="Género" required
+                #genre="ngModel" name="genre" [(ngModel)]="serieActualizar.genre" class="form-control">
+            </div>
+            <div>
+                <label for="date">Fecha</label>
+                <input type="text" id="date" placeholder="Fecha" required
+                #date="ngModel" name="date" [(ngModel)]="serieActualizar.date" class="form-control">
+            </div>
+            <div>
+                <label for="sypnosis">Sipnosis</label>
+                <input type="sypnosis" id="sypnosis" placeholder="Sipnosis" required
+                #sypnosis="ngModel" name="sypnosis" [(ngModel)]="serieActualizar.synopsis" class="form-control">
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="image">Imagen</label>
+                <input type="file" id="image" placeholder="Subir imagen" required (change)="subirImagen($event)">
+                <div id="imgThumb"></div>
+            </div>
+        </div>
+        <button class="btn btn-primary boton" type="submit">Actualizar</button>
+    </form>
+</div>

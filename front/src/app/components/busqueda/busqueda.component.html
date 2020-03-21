@@ -1,0 +1,28 @@
+<app-menu></app-menu>
+
+<h4 class="col-12 m-3" style="color: #fff;">
+  <h3 *ngIf="this.identidad">Resultado para: {{this.miBusqueda}}</h3>
+    
+</h4>
+<div data-aos="zoom-in">
+    <div class="card-deck m-3">
+
+      <div *ngIf="this.identidad" id="favoriteList"> 
+        <div>
+          <div *ngFor="let movie of movies" class="movieList"> 
+              <div class="card">    
+                <div class="card-body" (click)="verMovie(movie)">
+                  <img class="imgPelicula" src="{{ url + 'imagenPelicula/' + movie.image }}">
+                  <p class="card-text text-center" style="list-style: none;">{{movie.title}}</p>
+                  <p class="card-text text-center" ><small class="text-muted">{{movie.year}}</small></p>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</div>
+
+  
+

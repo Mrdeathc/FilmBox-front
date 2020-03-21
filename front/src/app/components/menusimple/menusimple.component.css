@@ -1,0 +1,23 @@
+.menu1 {
+    transform: translate(-0%, -0%);
+    z-index: 9999;
+    background-image: linear-gradient(to bottom, #000000, #00000085, #0000006e, #00000021, #ffffff00);
+    padding: 3%;
+}
+.logo2{
+    display: none;
+}
+
+@media screen and (max-width:980px) {
+    .menu1 {
+        padding: 1%;
+        background: rgba(0, 0, 0, 0.37);
+    }
+    .logo1 {
+        display: none;
+    }
+    .logo2 {
+        width: 40px;
+        display: block;
+    }
+}

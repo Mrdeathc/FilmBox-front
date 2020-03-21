@@ -1,0 +1,36 @@
+<app-menusimple></app-menusimple>
+<div class="row">
+<div class="contact-wrapper" data-aos="zoom-in">
+    <header class="login-cta">
+        <h2 class="title">Registro</h2>
+    </header>
+    <form #formularioRegsitro="ngForm" (ngSubmit)="registrarUsuario()">
+        <div class="form-row" >
+            <input class="color-1" type="text" required style="color: aliceblue;" 
+            #nombre="ngModel" name="name" [(ngModel)]="usuarioRegistro.name">
+            <span>Nombre y apellido</span>
+        </div>
+        <div class="form-row">
+            <input class="color-1" type="text"  required style="color: aliceblue;"
+            #correo="ngModel" name="email" [(ngModel)]="usuarioRegistro.email">
+            <span>Correo electronico</span>
+        </div>
+        <div class="form-row" id="">
+            <input class="color-1" type="password"  required style="color: aliceblue;"
+            #contrasena="ngModel" name="password" [(ngModel)]="usuarioRegistro.password">
+            <span>Contraseña</span>
+        </div>
+        <div class="form-row">
+            <input class="color-1" type="password" required style="color: aliceblue;">
+            <span>Repetir contraseña</span>
+        </div>
+        <div class="form-row"></div>
+        <div class="form-row">
+            <button type="submit">Registrar</button>
+        </div>
+    </form>
+</div>
+<br>
+<br>
+<br>
+</div>

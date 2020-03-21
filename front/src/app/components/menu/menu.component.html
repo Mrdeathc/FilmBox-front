@@ -1,0 +1,84 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark secondary-color menu1">
+    <a class="navbar-brand" routerLink="/FilmBox" style="cursor: pointer;"><img class="logo1" src="../../assets/img/logo-b2.png" alt=""><img
+        class="logo2" src="../../assets/img/logoresponsive.png" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/FilmBox" style="cursor: pointer;">Peliculas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/content-series" style="cursor: pointer;">Series</a>
+        </li>
+      </ul>
+      <form class="form-inline">
+        <div class="md-form my-0">
+          <button type="button" class="btn boton" data-toggle="modal" data-target="#exampleModalCenter">
+            <i class="fas fa-search" style="color: #fff;"></i>
+          </button>
+        </div>
+        <div class="btn-group boton">
+          <button type="button" class="btn dropdown-toggle boton" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false" style="color: #fff;">
+            <div class="user1">
+              <img id="imgUsuario"
+              src="" alt="" width="30px" style="float: left;">
+            </div>
+          </button>
+          <div class="dropdown-menu dropdown-menu-right">
+            <button class="dropdown-item" type="button" routerLink="/perfil" > Perfil</button>
+            <button class="dropdown-item bg-danger text-light" type="button" (click)="logout()">Cerrar sesión</button>
+          </div>
+        </div>
+  
+      </form>
+    </div>
+  </nav>
+  
+  <!--Main layout-->
+  <main>
+  
+    <div class="container-fluid">
+  
+    </div>
+  
+  </main>
+  <!--Main layout-->
+  
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true" >
+    <div class="modal-dialog modal-dialog-centered" role="document" >
+      <div class="modal-content" style="background: rgba(0, 0, 0, 0.493); padding: 20px 50px; border-radius: 20px;">
+        <div class="modal-header" style="border: none;">
+          <h5 class="modal-title" id="exampleModalLongTitle" style="color: #fff"><img src="../../assets/img/logo-b.png"
+              alt="" width="150px"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: #fff;">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        
+            <nav>
+              <ul>
+                  
+                  <div *ngIf="this.identidad">
+                    <form #formularioBuscar="ngForm" (ngSubmit)="buscar()">
+                      <input type="text" id="busqueda" placeholder="Busqueda" required
+                      #busqueda="ngModel" name="busqueda" [(ngModel)]="miBusqueda" style="display: block; margin: auto; padding: 10px 20px; width: 100%; text-align:  center; background: rgba(0, 0, 0, 0.493); border: none; color: #fff;">
+                      <button type="submit" class="boton" style="width: 100%; background: #000; border: none; color: #fff; font-weight: 100; padding: 3%;">
+                        <i class="fas fa-search" ></i>
+                      </button>
+                 
+                   </form>
+                  </div>
+              </ul>
+          </nav>
+        </div>
+        <div class="modal-footer" style="border: none; margin: auto;">
+        </div>
+      </div>
+    </div>
+  </div>
